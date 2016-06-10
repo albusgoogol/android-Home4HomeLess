@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.compscitutorials.basigarcia.navigationdrawervideotutorial">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDw4Yc_hUQxUI_K6eq_Ka556coqyd6fA54"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.record"
+            android:label="@string/title_activity_record"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.recordstaff"
+            android:label="@string/title_activity_recordstaff"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.staff_record1"
+            android:label="@string/title_activity_staff_record1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.staff_record2"
+            android:label="@string/title_activity_staff_record2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.staff_record3"
+            android:label="@string/title_activity_staff_record3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.search_report"
+            android:label="@string/title_activity_search_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.compscitutorials.basigarcia.Home4HomelessPro.notified_staff"
+            android:label="@string/title_activity_notified_staff"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.compscitutorials.basigarcia.Home4HomelessPro.UserActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+    </application>
+
+</manifest>

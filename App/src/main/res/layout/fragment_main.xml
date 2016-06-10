@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="80dp"
+    android:paddingBottom="16dp"
+    tools:context="com.compscitutorials.basigarcia.Home4HomelessPro.MainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/RecordButton">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:padding="30dp"
+
+                    android:src="@drawable/re"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="บันทึกรายงาน"/>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/clearSearchButton"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:padding="30dp"
+                    android:src="@drawable/searchre"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="ค้นหารายงาน"
+                    />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/promptedButton">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:padding="30dp"
+                    android:src="@drawable/prompted"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="รับแจ้งความช่วยเหลือ"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/followingButton"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:padding="30dp"
+                    android:src="@drawable/following"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="ติดตามการช่วยเหลือ"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/reportButton">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:padding="30dp"
+                    android:src="@drawable/report"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="รายงานผล"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/guidanceButton">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:padding="30dp"
+                    android:src="@drawable/act"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="พรบ."
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
