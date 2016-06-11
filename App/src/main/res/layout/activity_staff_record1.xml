@@ -22,57 +22,14 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="bottom|center"
-        android:background="#f4a13e"
-        android:foregroundGravity="bottom"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        android:paddingBottom="8dp"
-        android:paddingLeft="150dp"
-        android:paddingRight="150dp"
-        android:paddingTop="8dp"
-        android:textSize="20dp">
+        <include layout="@layout/content_staff_record1" />
 
-        <Button
-            android:id="@+id/stnext2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:background="#f4a13e"
-
-            android:foregroundGravity="right"
-            android:onClick="selfDestruct" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:scaleType="fitXY"
-            android:src="@drawable/arrow" />
-
-        <Button
-            android:id="@+id/stback2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:background="#f4a13e"
-            android:foregroundGravity="right"
-            android:onClick="selfDestruct" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:scaleType="fitXY"
-            android:src="@drawable/arrowb" />
-
-
-    </FrameLayout>
-
-    <include layout="@layout/content_staff_record1" />
+    </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
