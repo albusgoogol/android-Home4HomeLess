@@ -59,11 +59,11 @@ public class staff_record2 extends AppCompatActivity {
 
                     List<String> listJob = new ArrayList<>();
                     listJob.add(0, "เลือกอาชีพเดิม");
-                    for (int i = 0; i < response.body().getItemRange().size(); i++)
-                        listJob.add(response.body().getItemJob().get(i).getName());
-                    dataAdapter = new ArrayAdapter<String>(staff_record2.this,
+                    for (int i = 0; i < response.body().getItemJob().size(); i++)
+                        listJob.add(response.body().getItemJob().get(i).getJob());
+                    dataAdapter = new ArrayAdapter<>(staff_record2.this,
                             android.R.layout.simple_spinner_item, listJob);
-                    dropdown1.setAdapter(dataAdapter);
+                    dropdown2.setAdapter(dataAdapter);
                     dialog.cancel();
                 }
             }
