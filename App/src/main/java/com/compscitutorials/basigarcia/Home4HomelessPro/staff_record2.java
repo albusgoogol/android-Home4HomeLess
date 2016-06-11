@@ -1,10 +1,13 @@
 package com.compscitutorials.basigarcia.Home4HomelessPro;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 
 import com.compscitutorials.basigarcia.Home4HomelessPro.manager.HttpManager;
@@ -26,6 +29,8 @@ public class staff_record2 extends AppCompatActivity {
     ArrayAdapter<String> dataAdapter;
     ProgressDialog dialog;
 
+    ScrollView rootLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +40,18 @@ public class staff_record2 extends AppCompatActivity {
 
         dialog = new ProgressDialog(this);
         dialog.setMessage("กำลังโหลดข้อมูล");
+        dialog.setCancelable(false);
         dialog.show();
         loadRangeDate();
 
+        rootLayout = (ScrollView) findViewById(R.id.rootLayout);
         dropdown1 = (Spinner) findViewById(R.id.spinner1);
         dropdown2 = (Spinner) findViewById(R.id.spinner2);
 
+        rootLayout.setOnClickListener((view) -> {
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(rootLayout.getWindowToken(), 0);
+        });
     }
 
     private void loadRangeDate() {
