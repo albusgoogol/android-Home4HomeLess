@@ -53,7 +53,7 @@ public class staff_record2 extends AppCompatActivity {
                     listRange.add(0, "เลือกช่วงอายุ");
                     for (int i = 0; i < response.body().getItemRange().size(); i++)
                         listRange.add(response.body().getItemRange().get(i).getName());
-                    dataAdapter = new ArrayAdapter<String>(staff_record2.this,
+                    dataAdapter = new ArrayAdapter<>(staff_record2.this,
                             android.R.layout.simple_spinner_item, listRange);
                     dropdown1.setAdapter(dataAdapter);
 

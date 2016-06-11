@@ -25,7 +25,7 @@ public class RangeCollection {
         @SerializedName("code")
         private String code;
 
-        @SerializedName("job")
+        @SerializedName("name")
         private String name;
 
         public String getCode() {
