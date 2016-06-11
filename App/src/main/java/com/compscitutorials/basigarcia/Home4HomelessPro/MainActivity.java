@@ -1,5 +1,6 @@
 package com.compscitutorials.basigarcia.Home4HomelessPro;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -131,6 +132,10 @@ public class MainActivity extends AppCompatActivity
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setMessage("");
             builder.setPositiveButton("Ok", (dialog, which) -> {
+                SharedPreferences sf = getPreferences(MODE_PRIVATE);
+                SharedPreferences.Editor editor = sf.edit();
+                editor.putString("login", "false");
+                editor.apply();
                 finish();
             });
             builder.show();
