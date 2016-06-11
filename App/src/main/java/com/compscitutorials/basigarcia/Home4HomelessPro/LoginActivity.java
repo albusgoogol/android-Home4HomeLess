@@ -31,7 +31,7 @@ public class LoginActivity extends Activity {
     private EditText inputPassword;
     private ProgressDialog dialog;
 
-    private SharedPreferences sf = getPreferences(MODE_PRIVATE);
+    private SharedPreferences sf;
 
     Call<LoginCollection> call;
 
@@ -39,6 +39,8 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        sf = getSharedPreferences("state", MODE_PRIVATE);
 
         if (sf.getString("login", "false").equals("true")) {
             if (sf.getString("status", "unknow").equals("พลเมืองดี")) {

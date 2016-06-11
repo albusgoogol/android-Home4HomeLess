@@ -130,14 +130,16 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_logout) {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setMessage("");
-            builder.setPositiveButton("Ok", (dialog, which) -> {
-                SharedPreferences sf = getPreferences(MODE_PRIVATE);
+            builder.setMessage("ต้องการออกจากระบบ");
+            builder.setPositiveButton("ตกลง", (dialog, which) -> {
+                SharedPreferences sf = getSharedPreferences("state", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sf.edit();
                 editor.putString("login", "false");
                 editor.apply();
                 finish();
             });
+            builder.setNegativeButton("ยกเลิก", ((dialog, which) -> {
+            }));
             builder.show();
         }
 
