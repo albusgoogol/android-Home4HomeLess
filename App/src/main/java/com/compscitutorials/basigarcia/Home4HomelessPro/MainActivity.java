@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setMessage("");
             builder.setPositiveButton("Ok", (dialog, which) -> {
-
+                finish();
             });
             builder.show();
         }
