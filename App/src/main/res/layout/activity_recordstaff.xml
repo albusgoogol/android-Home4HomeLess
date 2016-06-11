@@ -37,24 +37,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
-        android:id="@+id/bottombar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_gravity="bottom|center"
-        android:background="#f4a13e">
-
-        <ImageView
-            android:id="@+id/stnext1"
-            android:layout_width="120dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:onClick="selfDestruct"
-            android:src="@drawable/arrow" />
-
-    </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -64,6 +46,5 @@
         <include layout="@layout/content_recordstaff" />
 
     </ScrollView>
-
 
 </android.support.design.widget.CoordinatorLayout>

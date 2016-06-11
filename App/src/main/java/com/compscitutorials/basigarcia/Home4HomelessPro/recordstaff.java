@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,7 +47,7 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        View btrecordstaff =findViewById(R.id.stnext1);
+        ImageView btrecordstaff = (ImageView) findViewById(R.id.stnext1);
         btrecordstaff.setOnClickListener(this);
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
@@ -93,7 +94,8 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.stnext1:
-                Intent i = new Intent(this,staff_record1.class);
+                Log.d("Click", "Click");
+                Intent i = new Intent(recordstaff.this, staff_record1.class);
                 startActivity(i);
                 break;
         }
@@ -102,7 +104,7 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
         }
     }
 
-    public String getStringImage(Bitmap bmp){
+    public String getStringImage(Bitmap bmp) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         byte[] imageBytes = baos.toByteArray();
@@ -110,8 +112,8 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
         return encodedImage;
     }
 
-    private void uploadImage(){
-        class UploadImage extends AsyncTask<Bitmap,Void,String> {
+    private void uploadImage() {
+        class UploadImage extends AsyncTask<Bitmap, Void, String> {
 
             ProgressDialog loading;
             RequestHandler rh = new RequestHandler();
@@ -119,14 +121,14 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                loading = ProgressDialog.show(recordstaff.this, "Uploading Image", "Please wait...",true,true);
+                loading = ProgressDialog.show(recordstaff.this, "Uploading Image", "Please wait...", true, true);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 loading.dismiss();
-                Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -134,10 +136,10 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
                 Bitmap bitmap = params[0];
                 String uploadImage = getStringImage(bitmap);
 
-                HashMap<String,String> data = new HashMap<>();
+                HashMap<String, String> data = new HashMap<>();
                 data.put(UPLOAD_KEY, uploadImage);
 
-                String result = rh.sendPostRequest(UPLOAD_URL,data);
+                String result = rh.sendPostRequest(UPLOAD_URL, data);
 
                 return result;
             }
@@ -146,7 +148,6 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
         UploadImage ui = new UploadImage();
         ui.execute(bitmap);
     }
-
 
 
     @Override

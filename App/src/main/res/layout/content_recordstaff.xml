@@ -4,11 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-
     tools:context="com.compscitutorials.basigarcia.Home4HomelessPro.recordstaff"
     tools:showIn="@layout/activity_recordstaff">
 
@@ -23,14 +18,13 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".MainActivity">
+        >
 
         <Button
             android:id="@+id/buttonChoose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Choose File" />
-
 
     </LinearLayout>
 
@@ -41,4 +35,22 @@
         android:layout_below="@id/rootButton"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true" />
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="#f4a13e">
+
+        <ImageView
+            android:id="@+id/stnext1"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:src="@drawable/arrow" />
+
+    </RelativeLayout>
 </RelativeLayout>
