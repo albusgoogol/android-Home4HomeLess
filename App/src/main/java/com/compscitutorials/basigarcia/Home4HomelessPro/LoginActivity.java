@@ -31,13 +31,24 @@ public class LoginActivity extends Activity {
     private EditText inputPassword;
     private ProgressDialog dialog;
 
-    Call<LoginCollection> call;
+    private SharedPreferences sf = getPreferences(MODE_PRIVATE);
 
+    Call<LoginCollection> call;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        if (sf.getString("login", "false").equals("true")) {
+            if (sf.getString("status", "unknow").equals("พลเมืองดี")) {
+                startActivity(new Intent(LoginActivity.this, UserActivity.class));
+                finish();
+            } else {
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
+            }
+        }
 
         dialog = new ProgressDialog(this);
 
@@ -69,15 +80,16 @@ public class LoginActivity extends Activity {
                 @Override
                 public void onResponse(Call<LoginCollection> call, Response<LoginCollection> response) {
                     if (response.isSuccessful() && response.body().getSuccess().equals("true")) {
-                        SharedPreferences sf = getPreferences(MODE_PRIVATE);
                         SharedPreferences.Editor editor = sf.edit();
                         editor.putString("login", "true");
 
                         if (response.body().getStatus().equals("พลเมืองดี")) {
                             startActivity(new Intent(LoginActivity.this, UserActivity.class));
+                            editor.putString("status", "พลเมืองดี");
                             finish();
                         } else {
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            editor.putString("status", "เจ้าหน้าที่");
                             finish();
                         }
                         editor.apply();
@@ -95,5 +107,12 @@ public class LoginActivity extends Activity {
                 }
             });
         });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (call != null && !call.isCanceled())
+            call.cancel();
     }
 }
