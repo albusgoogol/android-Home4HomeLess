@@ -8,6 +8,7 @@ package com.compscitutorials.basigarcia.Home4HomelessPro;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -67,7 +68,11 @@ public class LoginActivity extends Activity {
             call.enqueue(new Callback<LoginCollection>() {
                 @Override
                 public void onResponse(Call<LoginCollection> call, Response<LoginCollection> response) {
-                    if (response.isSuccessful() && response.body().getStatus().equals("true")) {
+                    if (response.isSuccessful() && response.body().getSuccess().equals("true")) {
+                        SharedPreferences sf = getPreferences(MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sf.edit();
+                        editor.putString("login", "true");
+
                         if (response.body().getStatus().equals("พลเมืองดี")) {
                             startActivity(new Intent(LoginActivity.this, UserActivity.class));
                             finish();
@@ -75,7 +80,9 @@ public class LoginActivity extends Activity {
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             finish();
                         }
+                        editor.apply();
                     } else {
+                        inputPassword.setText("");
                         Toast.makeText(LoginActivity.this, "รหัสผ่านหรืออีเมลไม่ถูกต้อง", Toast.LENGTH_LONG).show();
                     }
                     dialog.cancel();
