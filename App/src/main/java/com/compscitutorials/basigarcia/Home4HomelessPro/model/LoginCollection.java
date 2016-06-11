@@ -10,6 +10,20 @@ public class LoginCollection {
     @SerializedName("status")
     private String status;
 
+    @SerializedName("fname")
+    private String fname;
+
+    @SerializedName("lname")
+    private String lname;
+
+    public String getFname() {
+        return fname;
+    }
+
+    public String getLname() {
+        return lname;
+    }
+
     public String getSuccess() {
         return success;
     }
