@@ -1,5 +1,6 @@
 package com.compscitutorials.basigarcia.Home4HomelessPro;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -24,6 +25,7 @@ public class staff_record2 extends AppCompatActivity {
     Call<RangeCollection> call;
     Spinner dropdown;
     ArrayAdapter<String> dataAdapter;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,9 @@ public class staff_record2 extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("กำลังโหลดข้อมูล");
+        dialog.show();
         loadRangeDate();
 
         dropdown = (Spinner) findViewById(R.id.spinner1);
@@ -45,18 +50,25 @@ public class staff_record2 extends AppCompatActivity {
             public void onResponse(Call<RangeCollection> call, Response<RangeCollection> response) {
                 if (response.isSuccessful()) {
                     List<String> list = new ArrayList<>();
-                    list.add(response.body().getItem().get(0).getName());
+                    for (int i = 0; i < response.body().getItem().size(); i++)
+                        list.add(response.body().getItem().get(i).getName());
                     dataAdapter = new ArrayAdapter<String>(staff_record2.this,
                             android.R.layout.simple_spinner_item, list);
                     dropdown.setAdapter(dataAdapter);
+                    dialog.cancel();
                 }
             }
 
             @Override
             public void onFailure(Call<RangeCollection> call, Throwable t) {
-                Log.d("Data", "date");
+                dialog.cancel();
             }
         });
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        dialog.cancel();
+    }
 }
