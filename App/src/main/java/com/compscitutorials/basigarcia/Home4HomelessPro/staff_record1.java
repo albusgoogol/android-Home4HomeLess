@@ -37,29 +37,14 @@ import com.google.android.gms.location.places.PlaceBuffer;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
-import com.wdullaer.materialdatetimepicker.Utils;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
-import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
-import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.logging.Filter;
 
-public class staff_record1 extends AppCompatActivity implements  View.OnClickListener,GoogleApiClient.OnConnectionFailedListener,
+public class staff_record1 extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener,
         GoogleApiClient.ConnectionCallbacks,
-        DatePickerDialog.OnDateSetListener{
+        DatePickerDialog.OnDateSetListener {
 
     private EditText dateEditText;
 
@@ -71,12 +56,6 @@ public class staff_record1 extends AppCompatActivity implements  View.OnClickLis
     private PlaceArrayAdapter mPlaceArrayAdapter;
     private static final LatLngBounds BOUNDS_MOUNTAIN_VIEW = new LatLngBounds(
             new LatLng(37.398160, -122.180831), new LatLng(37.430610, -121.972090));
-
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,12 +84,6 @@ public class staff_record1 extends AppCompatActivity implements  View.OnClickLis
         mAddressTextView = (TextView) findViewById(R.id.address);
 
 
-
-
-
-
-
-
         mAutocompleteTextView.setOnItemClickListener(mAutocompleteClickListener);
         mPlaceArrayAdapter = new PlaceArrayAdapter(this, android.R.layout.simple_list_item_1,
                 BOUNDS_MOUNTAIN_VIEW, null);
@@ -135,8 +108,6 @@ public class staff_record1 extends AppCompatActivity implements  View.OnClickLis
             }
         });
 
-
-
     }
 
     @Override
@@ -146,7 +117,7 @@ public class staff_record1 extends AppCompatActivity implements  View.OnClickLis
         DatePickerDialog dpd = (DatePickerDialog) getFragmentManager().findFragmentByTag("Datepickerdialog");
 
 
-        if(dpd != null) dpd.setOnDateSetListener(this);
+        if (dpd != null) dpd.setOnDateSetListener(this);
     }
 
 
@@ -214,18 +185,14 @@ public class staff_record1 extends AppCompatActivity implements  View.OnClickLis
                 Intent i = new Intent(this, staff_record2.class);
                 startActivity(i);
                 break;
-
         }
-        
-
     }
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        String date = +dayOfMonth+"/"+(++monthOfYear)+"/"+year;
+        String date = +dayOfMonth + "/" + (++monthOfYear) + "/" + year;
         dateEditText.setText(date);
     }
-
 
 
 }
