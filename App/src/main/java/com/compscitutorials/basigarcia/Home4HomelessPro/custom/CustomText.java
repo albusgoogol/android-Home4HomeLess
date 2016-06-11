@@ -30,7 +30,7 @@ public class CustomText extends TextView {
 
     public void init() {
         if (!isInEditMode()) {
-            Typeface tf = Typeface.createFromAsset(Contextor.getInstance().getContext().getAssets(), "");
+            Typeface tf = Typeface.createFromAsset(Contextor.getInstance().getContext().getAssets(), "fonts/rsu.ttf");
             setTypeface(tf);
         }
     }

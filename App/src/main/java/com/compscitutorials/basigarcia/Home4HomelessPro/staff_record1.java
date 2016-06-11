@@ -193,8 +193,6 @@ public class staff_record1 extends AppCompatActivity implements View.OnClickList
         String date = +dayOfMonth + "/" + (++monthOfYear) + "/" + year;
         dateEditText.setText(date);
     }
-
-
 }
 
 
