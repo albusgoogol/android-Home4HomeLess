@@ -5,6 +5,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -13,12 +14,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.compscitutorials.basigarcia.navigationdrawervideotutorial.R;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
 
 
 public class MainActivity extends AppCompatActivity
@@ -31,9 +26,10 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar = null;
 
 
-    private  void  initialView() {
+    private void initialView() {
 
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +46,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -63,8 +58,7 @@ public class MainActivity extends AppCompatActivity
         //How to change elements in the header programatically
         View headerView = navigationView.getHeaderView(0);
 
-        FNname =(TextView) findViewById(R.id.Fname);
-
+        FNname = (TextView) findViewById(R.id.Fname);
 
 
         TextView emailText = (TextView) headerView.findViewById(R.id.email);
@@ -121,7 +115,6 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.commit();
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            //Set the fragment initially
             GalleryFragment fragment = new GalleryFragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
@@ -134,8 +127,13 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_logout) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setMessage("");
+            builder.setPositiveButton("Ok", (dialog, which) -> {
 
+            });
+            builder.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

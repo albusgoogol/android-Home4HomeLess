@@ -11,9 +11,6 @@ import android.view.ViewGroup;
 import com.compscitutorials.basigarcia.navigationdrawervideotutorial.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class MainFragment extends Fragment  {
 
 

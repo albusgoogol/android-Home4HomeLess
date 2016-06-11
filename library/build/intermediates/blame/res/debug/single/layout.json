@@ -1,38 +1,74 @@
 [
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_dialog.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_dialog.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_date_picker_view_animator.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_date_picker_view_animator.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_view_animator.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_view_animator.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_date_picker_selected_date.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_date_picker_selected_date.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_year_label_text_view.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_year_label_text_view.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_dialog.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_dialog.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_selected_date.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_selected_date.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_view_animator.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_view_animator.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_header_view.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_header_view.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_year_label_text_view.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_year_label_text_view.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_time_picker_dialog.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_time_picker_dialog.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_year_label_text_view.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_year_label_text_view.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_time_header_label.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_time_header_label.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_date_picker_dialog.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_date_picker_dialog.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_time_title_view.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_time_title_view.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_selected_date.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_selected_date.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_done_button.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_done_button.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_date_picker_header_view.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_date_picker_header_view.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_date_picker_header_view.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_date_picker_header_view.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_time_picker_dialog.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_time_picker_dialog.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_time_title_view.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_time_title_view.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_time_picker_dialog.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_time_picker_dialog.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_time_header_label.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_time_header_label.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_done_button.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_done_button.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_time_title_view.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_time_title_view.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\layout\\mdtp_done_button.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\layout\\mdtp_done_button.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/layout/mdtp_time_header_label.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/layout/mdtp_time_header_label.xml"
     }
 ]

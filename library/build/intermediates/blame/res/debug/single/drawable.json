@@ -1,18 +1,34 @@
 [
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_material_button_selected.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_material_button_selected.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_material_button_selected.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_material_button_selected.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_material_button_background.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_material_button_background.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_material_button_background.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_material_button_background.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_done_background_color.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_done_background_color.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/drawable/mdtp_done_background_color.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/drawable/mdtp_done_background_color.xml"
     },
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_done_background_color_dark.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_done_background_color_dark.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/drawable/mdtp_material_button_background.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/drawable/mdtp_material_button_background.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/drawable/mdtp_material_button_selected.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/drawable/mdtp_material_button_selected.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_done_background_color.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_done_background_color.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/debug/drawable/mdtp_done_background_color_dark.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/res/drawable/mdtp_done_background_color_dark.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\debug\\drawable\\mdtp_done_background_color_dark.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\src\\main\\res\\drawable\\mdtp_done_background_color_dark.xml"
     }
 ]

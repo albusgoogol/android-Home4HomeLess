@@ -19,6 +19,8 @@ public class AppController extends Application {
 	public void onCreate() {
 		super.onCreate();
 		mInstance = this;
+
+		Contextor.getInstance().init(getApplicationContext());
 	}
 
 	public static synchronized AppController getInstance() {

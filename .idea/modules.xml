@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NavigationDrawerTutorial-master.iml" filepath="$PROJECT_DIR$/NavigationDrawerTutorial-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-Home4HomeLess.iml" filepath="$PROJECT_DIR$/android-Home4HomeLess.iml" />
       <module fileurl="file://$PROJECT_DIR$/App/app.iml" filepath="$PROJECT_DIR$/App/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>

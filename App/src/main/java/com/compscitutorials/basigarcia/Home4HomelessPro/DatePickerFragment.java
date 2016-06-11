@@ -12,10 +12,6 @@ import com.compscitutorials.basigarcia.navigationdrawervideotutorial.R;
 
 import java.util.Calendar;
 
-
-/**
- * Created by jahid on 12/10/15.
- */
 public class DatePickerFragment extends DialogFragment
          implements DatePickerDialog.OnDateSetListener {
 

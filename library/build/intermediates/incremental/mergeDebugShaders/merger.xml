@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\Home4Homeless\NavigationDrawerTutorial-master\library\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\Home4Homeless\NavigationDrawerTutorial-master\library\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/src/debug/shaders"/></dataSet></merger>

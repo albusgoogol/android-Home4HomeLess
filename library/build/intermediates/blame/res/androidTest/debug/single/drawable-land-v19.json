@@ -1,6 +1,10 @@
 [
     {
-        "merged": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-land-v19\\mdtp_done_background_color.xml",
-        "source": "D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\bundles\\debug\\res\\drawable-land-v19\\mdtp_done_background_color.xml"
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-land-v19\\mdtp_done_background_color.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/D:\\Home4Homeless\\NavigationDrawerTutorial-master\\library\\build\\intermediates\\bundles\\debug\\res\\drawable-land-v19\\mdtp_done_background_color.xml"
+    },
+    {
+        "merged": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/res/merged/androidTest/debug/drawable-land-v19/mdtp_done_background_color.xml",
+        "source": "/Users/WeRockStar/Desktop/Android/android-Home4HomeLess/library/build/intermediates/bundles/debug/res/drawable-land-v19/mdtp_done_background_color.xml"
     }
 ]
