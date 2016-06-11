@@ -7,11 +7,18 @@ import java.util.List;
 
 public class RangeCollection {
 
-    @SerializedName("items")
-    private List<Items> item;
+    @SerializedName("range")
+    private List<Items> itemRange;
 
-    public List<Items> getItem() {
-        return item;
+    @SerializedName("job")
+    private List<Job> itemJob;
+
+    public List<Job> getItemJob() {
+        return itemJob;
+    }
+
+    public List<Items> getItemRange() {
+        return itemRange;
     }
 
     public class Items {
@@ -24,6 +31,15 @@ public class RangeCollection {
         public String getCode() {
             return code;
         }
+
+        public String getName() {
+            return name;
+        }
+    }
+
+    public class Job {
+        @SerializedName("name")
+        private String name;
 
         public String getName() {
             return name;

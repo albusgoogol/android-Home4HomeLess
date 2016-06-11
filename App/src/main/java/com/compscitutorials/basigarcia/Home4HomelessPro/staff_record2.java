@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -14,7 +13,6 @@ import com.compscitutorials.basigarcia.navigationdrawervideotutorial.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,7 +21,8 @@ import retrofit2.Response;
 public class staff_record2 extends AppCompatActivity {
 
     Call<RangeCollection> call;
-    Spinner dropdown;
+    Spinner dropdown1;
+    Spinner dropdown2;
     ArrayAdapter<String> dataAdapter;
     ProgressDialog dialog;
 
@@ -39,7 +38,8 @@ public class staff_record2 extends AppCompatActivity {
         dialog.show();
         loadRangeDate();
 
-        dropdown = (Spinner) findViewById(R.id.spinner1);
+        dropdown1 = (Spinner) findViewById(R.id.spinner1);
+        dropdown2 = (Spinner) findViewById(R.id.spinner2);
 
     }
 
@@ -49,12 +49,21 @@ public class staff_record2 extends AppCompatActivity {
             @Override
             public void onResponse(Call<RangeCollection> call, Response<RangeCollection> response) {
                 if (response.isSuccessful()) {
-                    List<String> list = new ArrayList<>();
-                    for (int i = 0; i < response.body().getItem().size(); i++)
-                        list.add(response.body().getItem().get(i).getName());
+                    List<String> listRange = new ArrayList<>();
+                    listRange.add(0, "เลือกช่วงอายุ");
+                    for (int i = 0; i < response.body().getItemRange().size(); i++)
+                        listRange.add(response.body().getItemRange().get(i).getName());
                     dataAdapter = new ArrayAdapter<String>(staff_record2.this,
-                            android.R.layout.simple_spinner_item, list);
-                    dropdown.setAdapter(dataAdapter);
+                            android.R.layout.simple_spinner_item, listRange);
+                    dropdown1.setAdapter(dataAdapter);
+
+                    List<String> listJob = new ArrayList<>();
+                    listJob.add(0, "เลือกอาชีพเดิม");
+                    for (int i = 0; i < response.body().getItemRange().size(); i++)
+                        listJob.add(response.body().getItemJob().get(i).getName());
+                    dataAdapter = new ArrayAdapter<String>(staff_record2.this,
+                            android.R.layout.simple_spinner_item, listJob);
+                    dropdown1.setAdapter(dataAdapter);
                     dialog.cancel();
                 }
             }
