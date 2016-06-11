@@ -31,18 +31,6 @@
             android:layout_height="wrap_content"
             android:text="Choose File" />
 
-        <Button
-            android:id="@+id/buttonUpload"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Upload Image" />
-
-
-        <Button
-            android:id="@+id/buttonViewImage"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="View Image" />
 
     </LinearLayout>
 

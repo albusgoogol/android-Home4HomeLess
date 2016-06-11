@@ -32,8 +32,6 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
     private int PICK_IMAGE_REQUEST = 1;
 
     private Button buttonChoose;
-    private Button buttonUpload;
-    private Button buttonView;
 
     private ImageView imageView;
 
@@ -52,13 +50,10 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
         btrecordstaff.setOnClickListener(this);
 
         buttonChoose = (Button) findViewById(R.id.buttonChoose);
-        buttonUpload = (Button) findViewById(R.id.buttonUpload);
-        buttonView = (Button) findViewById(R.id.buttonViewImage);
 
         imageView = (ImageView) findViewById(R.id.imageView);
 
         buttonChoose.setOnClickListener(this);
-        buttonUpload.setOnClickListener(this);
 
 
     }
@@ -104,9 +99,6 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
         }
         if (v == buttonChoose) {
             showFileChooser();
-        }
-        if(v == buttonUpload){
-            uploadImage();
         }
     }
 
@@ -159,9 +151,6 @@ public class recordstaff extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
