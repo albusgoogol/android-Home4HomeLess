@@ -12,55 +12,63 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
-            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-            android:background="#f4a13e" app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#f4a13e"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
     </android.support.design.widget.AppBarLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom|center"
+        android:background="#f4a13e"
+        android:foregroundGravity="bottom"
+
+        android:paddingBottom="8dp"
         android:paddingLeft="150dp"
         android:paddingRight="150dp"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:layout_gravity="bottom|center"
+        android:textSize="20dp">
 
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="20dp"
-        android:background="#f4a13e"
-        android:foregroundGravity="bottom">
-        <Button     android:id="@+id/stnext2"
+        <Button
+            android:id="@+id/stnext2"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="right"
             android:background="#f4a13e"
-            android:onClick="selfDestruct"
 
             android:foregroundGravity="right"
-            android:layout_gravity="right" />
+            android:onClick="selfDestruct" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="right"
             android:scaleType="fitXY"
-            android:src="@drawable/arrow"
-            android:layout_gravity="right" />
-        <Button     android:id="@+id/stback2"
+            android:src="@drawable/arrow" />
+
+        <Button
+            android:id="@+id/stback2"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="left"
             android:background="#f4a13e"
-            android:onClick="selfDestruct"
             android:foregroundGravity="right"
-            android:layout_gravity="left" />
+            android:onClick="selfDestruct" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_gravity="left"
             android:scaleType="fitXY"
-            android:src="@drawable/arrowb"
-            android:layout_gravity="left" />
-
-
+            android:src="@drawable/arrowb" />
 
 
     </FrameLayout>

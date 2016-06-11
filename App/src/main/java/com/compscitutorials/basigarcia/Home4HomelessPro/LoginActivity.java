@@ -78,69 +78,55 @@ public class LoginActivity extends Activity {
 
         inputEmail.setText("lambobobo17@gmail.com");
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.setMessage("Loading...");
-                dialog.show();
-                OkHttpClient client = new OkHttpClient();
-                RequestBody body = new FormBody.Builder()
-                        .add("email", inputEmail.getText().toString())
-                        .add("pass", inputPassword.getText().toString())
-                        .add("android", "android")
-                        .build();
+        btnLogin.setOnClickListener(v -> {
+            dialog.setMessage("Loading...");
+            dialog.show();
+
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("email", inputEmail.getText().toString())
+                    .add("pass", inputPassword.getText().toString())
+                    .add("android", "android")
+                    .build();
 
 
-                Request request = new Request.Builder()
-                        .url("http://home4homeless.azurewebsites.net/check_login.php")
-                        .post(body)
-                        .build();
-                Call call = client.newCall(request);
-                call.enqueue(new Callback() {
-                    Handler mainHandler = new Handler(getMainLooper());
+            Request request = new Request.Builder()
+                    .url("http://home4homeless.azurewebsites.net/check_login.php")
+                    .post(body)
+                    .build();
+            Call call = client.newCall(request);
+            call.enqueue(new Callback() {
+                Handler mainHandler = new Handler(getMainLooper());
 
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        mainHandler.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                dialog.cancel();
-                            }
-                        });
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    mainHandler.post(() -> {
+                        dialog.cancel();
+                        Toast.makeText(LoginActivity.this, "กรุณาต่อใช้งานอินเทร์เน็ต", Toast.LENGTH_LONG).show();
+                    });
 
-                    }
+                }
 
-                    @Override
-                    public void onResponse(Call call, okhttp3.Response response) throws IOException {
-                        if (response.isSuccessful()) {
-                            LoginCollection collection = new Gson().fromJson(response.body().string(), LoginCollection.class);
-                            if (collection.getSuccess().equals("true")) {
-                                if (collection.getStatus().equals("พลเมืองดี")) {
-                                    startActivity(new Intent(LoginActivity.this, UserActivity.class));
+                @Override
+                public void onResponse(Call call, okhttp3.Response response) throws IOException {
+                    if (response.isSuccessful()) {
+                        LoginCollection collection = new Gson().fromJson(response.body().string(), LoginCollection.class);
+                        if (collection.getSuccess().equals("true")) {
+                            if (collection.getStatus().equals("พลเมืองดี")) {
+                                startActivity(new Intent(LoginActivity.this, UserActivity.class));
 
-                                } else {
-                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                                }
-                                finish();
                             } else {
-                                mainHandler.post(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        Toast.makeText(LoginActivity.this, "email and password invalid", Toast.LENGTH_LONG).show();
-                                    }
-                                });
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             }
+                            finish();
+                        } else {
+                            mainHandler.post(() -> Toast.makeText(LoginActivity.this, "email and password invalid", Toast.LENGTH_LONG).show());
                         }
-                        mainHandler.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                dialog.cancel();
-                            }
-                        });
-
                     }
-                });
-            }
+                    mainHandler.post(() -> dialog.cancel());
+
+                }
+            });
         });
     }
 }

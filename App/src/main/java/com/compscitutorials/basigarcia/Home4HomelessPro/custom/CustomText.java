@@ -13,6 +13,7 @@ public class CustomText extends TextView {
 
     public CustomText(Context context) {
         super(context);
+        init();
     }
 
     public CustomText(Context context, AttributeSet attrs) {
@@ -21,14 +22,16 @@ public class CustomText extends TextView {
 
     public CustomText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public CustomText(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        init();
     }
 
-    public void init() {
+    void init() {
         if (!isInEditMode()) {
             Typeface tf = Typeface.createFromAsset(Contextor.getInstance().getContext().getAssets(), "fonts/rsu.ttf");
             setTypeface(tf);
