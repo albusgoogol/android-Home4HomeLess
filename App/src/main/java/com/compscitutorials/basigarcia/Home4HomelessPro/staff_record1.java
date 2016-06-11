@@ -51,6 +51,7 @@ public class staff_record1 extends AppCompatActivity implements View.OnClickList
         DatePickerDialog.OnDateSetListener {
 
     private EditText dateEditText;
+    private ImageView stback2;
 
     private static final String LOG_TAG = "MainActivity";
     private static final int GOOGLE_API_CLIENT_ID = 0;
@@ -71,6 +72,8 @@ public class staff_record1 extends AppCompatActivity implements View.OnClickList
         setSupportActionBar(toolbar);
 
         rootLayout = (RelativeLayout) findViewById(R.id.rootLayout);
+        stback2 = (ImageView) findViewById(R.id.stback2);
+        stback2.setOnClickListener(this);
         rootLayout.setOnClickListener(this);
 
         Spinner dropdown = (Spinner) findViewById(R.id.spinner1);
@@ -185,6 +188,9 @@ public class staff_record1 extends AppCompatActivity implements View.OnClickList
             case R.id.rootLayout:
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(rootLayout.getWindowToken(), 0);
+                break;
+            case R.id.stback2:
+                finish();
                 break;
         }
     }
