@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 
@@ -29,7 +30,7 @@ public class staff_record2 extends AppCompatActivity {
     ArrayAdapter<String> dataAdapter;
     ProgressDialog dialog;
 
-    ScrollView rootLayout;
+    LinearLayout rootLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class staff_record2 extends AppCompatActivity {
         dialog.show();
         loadRangeDate();
 
-        rootLayout = (ScrollView) findViewById(R.id.rootLayout);
+        rootLayout = (LinearLayout) findViewById(R.id.content);
         dropdown1 = (Spinner) findViewById(R.id.spinner1);
         dropdown2 = (Spinner) findViewById(R.id.spinner2);
 
