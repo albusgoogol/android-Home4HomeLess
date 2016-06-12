@@ -155,9 +155,7 @@
                 android:layout_height="wrap_content"
                 android:text="เลขประจำตัวประชาชน"
                 android:textSize="16dp"
-
                 />
-
 
             <EditText
                 android:id="@+id/editText5"

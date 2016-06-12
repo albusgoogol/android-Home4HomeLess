@@ -61,7 +61,7 @@
         </activity>
         <activity
             android:name="com.compscitutorials.basigarcia.Home4HomelessPro.notified_staff"
-            android:label="@string/title_activity_notified_staff"
+            android:label="รับแจ้งความช่วยเหลือ"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.compscitutorials.basigarcia.Home4HomelessPro.UserActivity"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->

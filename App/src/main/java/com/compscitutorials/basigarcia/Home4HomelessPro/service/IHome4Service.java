@@ -1,5 +1,6 @@
 package com.compscitutorials.basigarcia.Home4HomelessPro.service;
 
+import com.compscitutorials.basigarcia.Home4HomelessPro.model.InformCollection;
 import com.compscitutorials.basigarcia.Home4HomelessPro.model.RangeCollection;
 import com.compscitutorials.basigarcia.Home4HomelessPro.model.LoginCollection;
 
@@ -20,4 +21,7 @@ public interface IHome4Service {
 
     @GET("api/record.php")
     Call<RangeCollection> getRange();
+
+    @GET("api/homelessinform.php")
+    Call<InformCollection> getInform();
 }
