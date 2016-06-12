@@ -78,36 +78,7 @@ public class LoginActivity extends Activity {
             String password = inputPassword.getText().toString();
 
             call = HttpManager.getInstance().getService().login(email, password, "android");
-            call.enqueue(new Callback<LoginCollection>() {
-                @Override
-                public void onResponse(Call<LoginCollection> call, Response<LoginCollection> response) {
-                    if (response.isSuccessful() && response.body().getSuccess().equals("true")) {
-                        SharedPreferences.Editor editor = sf.edit();
-                        editor.putString("login", "true");
-
-                        if (response.body().getStatus().equals("พลเมืองดี")) {
-                            startActivity(new Intent(LoginActivity.this, UserActivity.class));
-                            editor.putString("status", "พลเมืองดี");
-                            finish();
-                        } else {
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                            editor.putString("status", "เจ้าหน้าที่");
-                            finish();
-                        }
-                        editor.apply();
-                    } else {
-                        inputPassword.setText("");
-                        Toast.makeText(LoginActivity.this, "รหัสผ่านหรืออีเมลไม่ถูกต้อง", Toast.LENGTH_LONG).show();
-                    }
-                    dialog.cancel();
-                }
-
-                @Override
-                public void onFailure(Call<LoginCollection> call, Throwable t) {
-                    Toast.makeText(LoginActivity.this, t.getMessage().toString(), Toast.LENGTH_LONG).show();
-                    dialog.cancel();
-                }
-            });
+            call.enqueue(new CallbackData());
         });
     }
 
@@ -116,5 +87,36 @@ public class LoginActivity extends Activity {
         super.onStop();
         if (call != null && !call.isCanceled())
             call.cancel();
+    }
+
+    private class CallbackData implements Callback<LoginCollection> {
+        @Override
+        public void onResponse(Call<LoginCollection> call, Response<LoginCollection> response) {
+            if (response.isSuccessful() && response.body().getSuccess().equals("true")) {
+                SharedPreferences.Editor editor = sf.edit();
+                editor.putString("login", "true");
+
+                if (response.body().getStatus().equals("พลเมืองดี")) {
+                    startActivity(new Intent(LoginActivity.this, UserActivity.class));
+                    editor.putString("status", "พลเมืองดี");
+                    finish();
+                } else {
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    editor.putString("status", "เจ้าหน้าที่");
+                    finish();
+                }
+                editor.apply();
+            } else {
+                inputPassword.setText("");
+                Toast.makeText(LoginActivity.this, "รหัสผ่านหรืออีเมลไม่ถูกต้อง", Toast.LENGTH_LONG).show();
+            }
+            dialog.cancel();
+        }
+
+        @Override
+        public void onFailure(Call<LoginCollection> call, Throwable t) {
+            Toast.makeText(LoginActivity.this, t.getMessage().toString(), Toast.LENGTH_LONG).show();
+            dialog.cancel();
+        }
     }
 }

@@ -193,7 +193,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_alignParentBottom="true"
         android:layout_below="@id/content"
         android:background="#f4a13e"
         android:foregroundGravity="bottom">
